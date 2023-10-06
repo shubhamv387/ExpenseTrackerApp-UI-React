@@ -34,18 +34,18 @@ function App() {
     },
   ];
   return (
-    <>
+    <div>
       <h1>Expense App</h1>
       {expenses.map((expense) => (
         <ExpenseItem
-          id={expense.id}
+          key={expense.id}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
           locationOfExpenditure={expense.locationOfExpenditure}
         />
       ))}
-    </>
+    </div>
   );
 }
 
