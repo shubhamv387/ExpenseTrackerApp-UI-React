@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 
 const Expenses = ({ items }) => {
+  const [expenses, setExpenses] = useState(items);
+
+  let deleteExpense = (id) => {
+    setExpenses(expenses.filter((i) => i.id !== id));
+  };
+
   return (
     <Card className="expenses">
-      {items.map((expense) => (
+      {expenses.map((expense) => (
         <ExpenseItem
           key={expense.id}
+          id={expense.id}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
+          delete={deleteExpense}
           locationOfExpenditure={expense.locationOfExpenditure}
         />
       ))}
