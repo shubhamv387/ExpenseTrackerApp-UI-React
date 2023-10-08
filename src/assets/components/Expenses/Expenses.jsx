@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
-import ExpenseForm from "./ExpenseForm";
 
 const Expenses = ({ items }) => {
   const [expenses, setExpenses] = useState(items);
@@ -24,7 +23,6 @@ const Expenses = ({ items }) => {
           locationOfExpenditure={expense.locationOfExpenditure}
         />
       ))}
-      <ExpenseForm />
     </Card>
   );
 };
