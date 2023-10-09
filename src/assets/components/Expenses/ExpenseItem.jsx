@@ -6,7 +6,8 @@ import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
   const deleteHandler = (id) => {
-    props.delete(id);
+    const result = window.confirm("Are you Sure?");
+    result && props.delete(id);
   };
 
   return (
@@ -14,7 +15,12 @@ const ExpenseItem = (props) => {
       <Card className="expense-item">
         <ExpenseDate date={props.date} />
         <ExpenseDetails title={props.title} amount={props.amount} />
-        <button onClick={() => deleteHandler(props.id)}>Delete</button>
+        <button
+          className="expense-item__delete"
+          onClick={() => deleteHandler(props.id)}
+        >
+          X
+        </button>
       </Card>
     </li>
   );
