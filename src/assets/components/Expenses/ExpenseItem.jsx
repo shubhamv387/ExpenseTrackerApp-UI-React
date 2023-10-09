@@ -23,11 +23,7 @@ const ExpenseItem = (props) => {
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
-      <ExpenseDetails
-        title={title}
-        locationOfExpenditure={props.locationOfExpenditure}
-        amount={amount}
-      />
+      <ExpenseDetails title={title} amount={amount} />
       <button onClick={titleHandler}>Change Title</button>
       <button onClick={amountHandler}>Change Amount</button>
       <button onClick={() => deleteHandler(props.id)}>Delete</button>
