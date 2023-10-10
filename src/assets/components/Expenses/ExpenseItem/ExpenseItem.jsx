@@ -1,8 +1,7 @@
-import { useState } from "react";
 import "./ExpenseItem.css";
-import ExpenseDate from "./ExpenseDate";
-import ExpenseDetails from "./ExpenseDetails";
-import Card from "../UI/Card";
+import ExpenseDate from "../ExpenseDate/ExpenseDate";
+import ExpenseDetails from "../ExpenseDetails";
+import Card from "../../UI/Card";
 
 const ExpenseItem = (props) => {
   const deleteHandler = (id) => {
