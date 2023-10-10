@@ -3,7 +3,7 @@ import "./App.css";
 import Expenses from "./assets/components/Expenses/Expenses/Expenses";
 import NewExpense from "./assets/components/newExpense/NewExpense";
 
-function App() {
+const App = () => {
   const data = [
     {
       id: 1,
@@ -49,6 +49,6 @@ function App() {
       <Expenses items={expenses} onDeleteExpense={deleteExpense} />;
     </div>
   );
-}
+};
 
 export default App;
