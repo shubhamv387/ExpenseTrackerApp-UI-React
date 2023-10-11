@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Expenses from "./assets/components/Expenses/Expenses/Expenses";
-import NewExpense from "./assets/components/newExpense/NewExpense";
+import Expenses from "./components/Expenses/Expenses/Expenses";
+import NewExpense from "./components/newExpense/NewExpense";
 
 const App = () => {
   const data = [
